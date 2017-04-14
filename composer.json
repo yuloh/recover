@@ -1,0 +1,36 @@
+{
+    "name": "yuloh/recover",
+    "description": "A composable error handler for PHP 7.1+",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matt Allan",
+            "email": "matthew.james.allan@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/console": "^3.2",
+        "sentry/sentry": "^1.6",
+        "zendframework/zend-diactoros": "^1.4",
+        "http-interop/http-factory-diactoros": "^0.3.0"
+    },
+    "require": {
+        "php": ">=7.1.0",
+        "http-interop/http-factory": "^0.3.0",
+        "psr/http-message": "^1.0",
+        "psr/log": "^1.0"
+    },
+    "suggest": {
+        "psr/log-implementation": "To use the log reporter",
+        "sentry/sentry": "To use the Sentry reporter",
+        "symfony/console": "To use the Symfony application console renderer",
+        "zendframework/zend-diactoros": "To use the diactoros HTTP renderer",
+        "psr/http-factory-implementation": "To use the response builders"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yuloh\\Recover\\": "src"
+        }
+    }
+}
