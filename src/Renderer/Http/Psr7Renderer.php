@@ -3,9 +3,8 @@
 namespace Yuloh\Recover\Renderer\Http;
 
 use Yuloh\Recover\RendererInterface;
-use Zend\Diactoros\Response\SapiEmitter;
 
-class DiactorosRenderer implements RendererInterface
+class Psr7Renderer implements RendererInterface
 {
     /**
      * @var ResponseBuilderInterface
@@ -19,6 +18,6 @@ class DiactorosRenderer implements RendererInterface
 
     public function render(\Throwable $throwable): void
     {
-        (new SapiEmitter())->emit($this->responseBuilder->build($throwable));
+        \Http\Response\send($this->responseBuilder->build($throwable));
     }
 }
