@@ -13,7 +13,8 @@
         "symfony/console": "^3.2",
         "sentry/sentry": "^1.6",
         "zendframework/zend-diactoros": "^1.4",
-        "http-interop/http-factory-diactoros": "^0.3.0"
+        "http-interop/http-factory-diactoros": "^0.3.0",
+        "phpunit/phpunit": "^6.1"
     },
     "require": {
         "php": ">=7.1.0",
